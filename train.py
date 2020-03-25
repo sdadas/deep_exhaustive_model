@@ -34,7 +34,7 @@ if DATASET == "nne":
     TRAIN_URL = from_project_root("data/nne.train.iob2")
     DEV_URL = from_project_root("data/nne.dev.iob2")
     TEST_URL = from_project_root("data/nne.test.iob2")
-    N_EPOCHS = 50
+    N_EPOCHS = 1000
 LOG_PER_BATCH = 20
 
 
@@ -48,7 +48,7 @@ def train(n_epochs=N_EPOCHS,
           max_region=10,
           learning_rate=0.001,
           batch_size=100,
-          early_stop=10,
+          early_stop=1000,
           clip_norm=5,
           device='auto',
           save_only_best = True
