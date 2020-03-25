@@ -20,13 +20,21 @@ from eval import evaluate
 RANDOM_SEED = 233
 set_random_seed(RANDOM_SEED)
 
-# EMBD_URL = None  # fot not use pretrained embedding
+DATASET = sys.argv[1]
+
 EMBD_URL = from_project_root("data/embedding/PubMed-shuffle-win-30.bin")
 VOCAB_URL = from_project_root("data/vocab.json")
 TRAIN_URL = from_project_root("data/genia.train.iob2")
 DEV_URL = from_project_root("data/genia.dev.iob2")
 TEST_URL = from_project_root("data/genia.test.iob2")
-
+N_EPOCHS = 30
+if DATASET == "nne":
+    EMBD_URL = from_project_root("data/embedding/wikipedia200.bin")
+    VOCAB_URL = from_project_root("data/vocab.json")
+    TRAIN_URL = from_project_root("data/nne.train.iob2")
+    DEV_URL = from_project_root("data/nne.dev.iob2")
+    TEST_URL = from_project_root("data/nne.test.iob2")
+    N_EPOCHS = 50
 LOG_PER_BATCH = 20
 
 
