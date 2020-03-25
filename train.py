@@ -29,7 +29,7 @@ DEV_URL = from_project_root("data/genia.dev.iob2")
 TEST_URL = from_project_root("data/genia.test.iob2")
 N_EPOCHS = 30
 if DATASET == "nne":
-    EMBD_URL = from_project_root("data/embedding/wikipedia200.bin")
+    EMBD_URL = from_project_root("data/embedding/glove.6B.300d.bin")
     VOCAB_URL = from_project_root("data/vocab.json")
     TRAIN_URL = from_project_root("data/nne.train.iob2")
     DEV_URL = from_project_root("data/nne.dev.iob2")
