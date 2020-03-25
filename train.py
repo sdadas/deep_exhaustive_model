@@ -38,7 +38,7 @@ if DATASET == "nne":
 LOG_PER_BATCH = 20
 
 
-def train(n_epochs=30,
+def train(n_epochs=N_EPOCHS,
           embedding_url=None,
           char_feat_dim=50,
           freeze=False,
